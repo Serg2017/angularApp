@@ -1,5 +1,47 @@
-h1 {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 10px auto;
+}
+
+.header {
+  border: 1px solid grey;
+}
+
+.header__title {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.nav {
+  background: #c4dca7;
+}
+
+.nav__item {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.nav__link {
+  display: block;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.content {
+  border: 1px solid grey;
+  margin-top: 10px;
+}
+
+.indent {
+  padding: 10px;
 }

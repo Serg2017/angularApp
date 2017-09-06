@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="header">
+        <h1 class="header__title">{{title}}</h1>
+        <ul class="nav">
+            <li class="nav__item"><a routerLink = "/" class="nav__link">Main</a></li>
+            <li class="nav__item"><a routerLink = "articles" class="nav__link">Articles</a></li>
+            <li class="nav__item"><a routerLink = "contact" class="nav__link">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
