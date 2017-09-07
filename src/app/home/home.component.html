@@ -1,3 +1,34 @@
-<p class="indent">
-    home page
-</p>
+<h1 class="indent">
+    Main page
+</h1>
+
+<!--<ul class="indent bird" *ngIf="visible">
+    <li *ngFor="let bird of birds" [ngStyle]="{background:bird.color}" (click)="show($event)" class="bird__item">
+        <span (click)="addLike()">{{bird.likes}}</span>
+        {{bird.name}}
+
+    </li>
+</ul>-->
+
+<form class="form">
+    <input name="name" placeholder="Name" class="form__input" [(ngModel)]="name" required  />
+    <button class="form__button" (click)="addBird(name)">Add</button>
+</form>
+
+<table *ngIf="visible" class="birds">
+    <tr>
+        <td class="birds__title">ID</td>
+        <td class="birds__title" (click)="sort()">BirdName</td>
+        <td class="birds__title">Likes</td>
+        <td class="birds__title">DisLikes</td>
+        <td class="birds__title">Delete</td>
+    </tr>
+    <tr *ngFor="let bird of birds; let i = index">
+
+        <td class="birds__id">{{bird.id}}</td>
+        <td class="birds__name">{{bird.name}}</td>
+        <td class="birds__likes" (click)="addLike(i)">{{bird.likes}}</td>
+        <td class="birds__dislikes" (click)="addDisLike(i)">{{bird.dislike}}</td>
+        <td class="birds__remove" (click)="remove(i)">delete</td>
+    </tr>
+</table>
