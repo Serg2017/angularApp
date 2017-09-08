@@ -7,9 +7,12 @@ import {RouterModule} from '@angular/router';
 import {ArticleComponent} from './article/article.component';
 import {ContactComponent} from './contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
   imports:      [
+      HttpModule,
       BrowserModule,
       FormsModule,
       ReactiveFormsModule,
@@ -17,7 +20,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
           { path: '', component: HomeComponent },
           { path: 'articles', component: ArticleComponent },
           { path: 'contact', component: ContactComponent },
-      ]),
+      ])
   ],
   declarations: [
       AppComponent,
